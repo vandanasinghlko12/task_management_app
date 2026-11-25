@@ -4,36 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Task Management App</title>
   </head>
   <body>
-    <input
-      type="text"
-      name="task"
-      placeholder="Enter the task"
-      id="text-input"
-    />
-    <input
-      type="text"
-      name="category"
-      placeholder="Enter the category"
-      id="category"
-    />
+    <div class="container">
+      <h1>Task Management App</h1>
+      <input
+        type="text"
+        name="task"
+        placeholder="Enter the task"
+        id="text-input"
+      />
+      <input
+        type="text"
+        name="category"
+        placeholder="Enter the category"
+        id="category"
+      />
 
-    <input
-      type="date"
-      name="deadline"
-      placeholder="Enter the date"
-      id="date-input"
-    />
-    <label for="status">Select a status</label>
-    <select id="status" name="status">
-      <option value="pending">Pending</option>
-      <option value="in progress">In Progress</option>
-      <option value="completed">Completed</option>
-    </select>
-    <button type="button" id="btn">Add Task</button>
-    <ul id="taskItem"></ul>
+      <input
+        type="date"
+        name="deadline"
+        placeholder="Enter the date"
+        id="date-input"
+      />
+      <label for="status">Select a status</label>
+      <select id="status" name="status">
+        <option value="pending">Pending</option>
+        <option value="inprogress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+      <label for="filterstatus">Filter By Status</label>
+      <select id="filterStatus" name="status">
+        <option value="all">All Task</option>
+        <option value="pending">Pending</option>
+        <option value="inprogress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+
+      <button type="button" id="btn">Add Task</button>
+      <ul id="taskItem"></ul>
+    </div>
   </body>
 </html>

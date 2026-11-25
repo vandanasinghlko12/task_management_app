@@ -1,17 +1,41 @@
-body{
-    background-color:rgb(173, 157, 92);
-    display:flex;
-    justify-content: center;
-    align-items: center;  
-    min-height: 100vh;  
-   
+body {
+  background-color: #eaf2f8;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.taskItem{
-    flex-direction: column;
+.container {
+  width: 450px;
+  margin: 30px auto;
 }
 
-input{
-        padding: 5px;
-        
+input,
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#taskItem {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+#taskItem li {
+  background-color: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
