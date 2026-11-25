@@ -4,7 +4,7 @@ const dateItem = document.getElementById("date-input");
 const selectStatus = document.getElementById("status");
 const addTaskButton = document.getElementById("btn");
 const addFilterStatus = document.getElementById("filterStatus");
-const tasks = [];
+const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 addTaskButton.addEventListener("click", () => {
   let inputField = input.value;
   let categoryField = categoryItem.value;
@@ -19,6 +19,7 @@ addTaskButton.addEventListener("click", () => {
   };
 
   tasks.push(task);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 
   console.log(tasks);
   filterTasks();
@@ -70,6 +71,7 @@ function displayTasks(taskArray = tasks) {
     select.value = taskArray[i].selectStatus;
     select.addEventListener("change", () => {
       taskArray[i].selectStatus = select.value;
+      localStorage.setItem("tasks", JSON.stringify(tasks));
       filterTasks();
     });
 
@@ -87,3 +89,4 @@ function filterTasks() {
   displayTasks(filteredTask);
 }
 addFilterStatus.addEventListener("change", filterTasks);
+displayTasks();
