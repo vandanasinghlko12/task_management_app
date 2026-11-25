@@ -1,0 +1,17 @@
+body{
+    background-color:rgb(173, 157, 92);
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+    min-height: 100vh;  
+   
+}
+
+.taskItem{
+    flex-direction: column;
+}
+
+input{
+        padding: 5px;
+        
+}

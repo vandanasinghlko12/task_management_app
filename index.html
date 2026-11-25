@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Task Management App</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="task"
+      placeholder="Enter the task"
+      id="text-input"
+    />
+    <input
+      type="text"
+      name="category"
+      placeholder="Enter the category"
+      id="category"
+    />
+
+    <input
+      type="date"
+      name="deadline"
+      placeholder="Enter the date"
+      id="date-input"
+    />
+    <label for="status">Select a status</label>
+    <select id="status" name="status">
+      <option value="pending">Pending</option>
+      <option value="in progress">In Progress</option>
+      <option value="completed">Completed</option>
+    </select>
+    <button type="button" id="btn">Add Task</button>
+    <ul id="taskItem"></ul>
+  </body>
+</html>
